@@ -1,0 +1,151 @@
+{%load static%}
+<!doctype html>
+<html>
+<head>
+
+  <title>Inicio</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="{% static 'css/estilo.css' %}" type="text/css" rel="stylesheet"> 
+  <link href="{% static 'img/login.ico' %}" rel="icon" type="image/x-icon" /> 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body class="fondo">
+    <nav class="navbar navbar-expand-sm navbar-dark"  style="background-color: #000000ea;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+          <!-- logo -->
+        <div>
+          <img src="{%static 'img/iluverde.png '%}" width="70" height="70" >
+        </div>
+        </div>
+         <!-- menu -->
+     <div class="collapse navbar-collapse" id="opciones"> 
+      <h4 class="tipoletra">CAOS NEWS</h4>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link tamano" href="{% url 'Inicio' %}" style="color: rgb(255, 255, 255);">INICIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link tamano" href="{% url 'Lista' %}" style="color: rgb(255, 255, 255);">COLABORADORES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link tamano" href="{% url 'Crear' %}" style="color: rgb(255, 255, 255);">CREAR COLABORADOR</a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+        
+      <!--FOTO SUPERIOR-->
+      <div class="hero-image">
+        <div class="hero-text">
+          <h1>BIENVENIDO A CAOS NEWS</h1>
+          <p class="lette">TUS NOTICIAS AL INSTANTE</p>
+        </div>
+      </div>
+      <br>
+      <div class="container" >
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="{%static 'img/mundonew.jpg '%}" alt="First slide" >
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="{%static 'img/coro.jpg'%}" alt="Second slide" >
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="{%static 'img/estallido.jpg'%}" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <br>
+      </div>
+      <!--presentacion-->
+
+      </div>
+      <div class="container">   
+        <div class="row">       
+          <div class="col-md">        
+              <div class="card">
+                <div class="card-body">
+                  <h4>Masivas protestas en Chile por el primer aniversario del estallido social terminan con incidentes aislados y la quema de dos iglesias</h4>
+                  <p class="let">El primer aniversario del llamado"estallido social en Chile" fue conmemorado este domingo con una serie de multitudinarias manifestaciones que transcurrieron en su mayoría de manera pacífica, aunque hubo enfrentamientos aislados con la policía, según reportan agencias de noticias, y se registraron ataques a dos iglesias.
+                    Las protestas congregaron a unas 25.000 personas, entre jóvenes, adultos y adultos mayores, según información de Carabineros de Chile reportada por medios locales.
+                    Gran parte de los manifestantes se concentró desde alrededor de las 10 de la mañana en la Plaza Dignidad, un centro neurálgico de la capital chilena.
+                    También hubo manifestaciones en ciudades como Valparaíso, Viña del Mar, Antofagasta y Concepción.</p>
+                    <p class="let2">
+                      19 Octubre 2020                    </p>
+                    <img class="card-img-top" src="{%static 'img/estallar.png'%}">
+                </div>
+              </div>          
+          </div>
+        </div>
+      </div>
+      <br><br>
+    </div>
+    <div class="container">   
+      <div class="row">       
+        <div class="col-md">        
+            <div class="card">
+              <div class="card-body">
+                <h4>Chile informa 2.648 nuevos contagios de COVID-19: segunda vez bajo los 3 mil en siete días</h4>
+                <p class="let">El Ministerio de Salud (Minsal) entregó, durante la mañana de este martes, un nuevo balance del COVID-19. En su informe se confirmó el registro de 2.648 nuevos casos, sumando 1.553.774 desde el inicio de la pandemia. 
+                  Esta cifra diaria es la segunda informada por debajo de los 3 mil contagios en una semana. La última fue el pasado 23 de junio, donde se registraron 2.768 casos. 
+                  De los nuevos casos, 1.827 corresponden a personas que desarrollaron síntomas y 579 son asintomáticos. 
+                  En tanto, 25.688 pacientes están en etapa activa del virus, es decir, en el periodo contagiante de la enfermedad. </p>
+                  <p class="let2">
+                    29 Junio 2021
+                  </p>
+                  <img class="card-img-top" src="{%static 'img/covid1.jpg'%}">
+              </div>
+            </div>          
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <!-- Footer -->
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Subir al inicio</a>
+    </p>
+    <div class="shared-panel">
+      <span>Encuentranos en nuestras redes sociales</span><br>
+      <a target="_blank" class="shared fb" title="Facebook"></a>	
+      <a target="_blank" class="shared tt" title="Twitter"></a>
+      <a target="_blank" class="shared gp" title="Google+"></a>
+      <a  data-action='share/whatsapp/share' class="shared wa" title="WhatsApp"></a>
+      <a target="_blank" class="shared ce" id="sml" title="Email"></a>		
+    </div>
+    <p class="mb-1">Javier Reyes &copy; Derechos reservados.</p>
+    <p class="mb-0">¿Eres nuevo en Caos News? <a href="#"> visita nuestro homepage</a> o lee  <a href="#">nuestra politica</a>.</p>
+  </div>
+</footer>
+ 
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    </body>
+
+
+
+</html>

@@ -1,0 +1,121 @@
+{%load static%}
+<!doctype html>
+<html>
+<head>
+  
+  <title>Colaboradores</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="{% static 'css/estilo.css' %}" type="text/css" rel="stylesheet"> 
+  <link href="{% static 'img/login.ico' %}" rel="icon" type="image/x-icon" /> 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body class="fondo">
+  <nav class="navbar navbar-expand-sm navbar-dark"  style="background-color: #000000ea;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+        <!-- logo -->
+      <div>
+        <img src="{%static 'img/iluverde.png '%}" width="70" height="70" >
+      </div>
+      </div>
+       <!-- menu -->
+   <div class="collapse navbar-collapse" id="opciones"> 
+    <h4 class="tipoletra">CAOS NEWS</h4>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link tamano" href="{% url 'Inicio' %}" style="color: rgb(255, 255, 255);">INICIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link tamano" href="{% url 'Lista' %}" style="color: rgb(255, 255, 255);">COLABORADORES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link tamano" href="{% url 'Crear' %}" style="color: rgb(255, 255, 255);">CREAR COLABORADOR</a>
+      </li>
+      </ul>
+    </div>
+  </nav>
+      <!--FOTO SUPERIOR-->
+      <div class="hero-image">
+        <div class="hero-text">
+          <h1>LISTA DE COLABORADORES</h1>
+        </div>
+      </div>
+      <br>      
+<br>
+<br>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <table class="table table-striped table-bordered table-hover table-primary">
+              <thead>
+                <tr>
+                  <th>Rut Colaborador: </th>
+                  <th>Usuario: </th>
+                  <th>Nombre: </th>
+                  <th>Teléfono: </th>
+                  <th>Dirección: </th>
+                  <th>Correo del Colaborador: </th>
+                  <th>País: </th>
+                  <th>Contraseña: </th>
+                  <th>Modificaciones</th>
+                  <th>Eliminar</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tr>
+              {%for visu in InfoAdm%}       
+                  <tr>       
+                      <td>{{visu.rutColaborador}}</td>
+                      <td><img src="{{visu.image.url}}" class="img-fluid rounded" width="60px" height="70px"></td>
+                      <td>{{visu.nombre}}</td>   
+                      <td>{{visu.telefono}}</td>  
+                      <td>{{visu.direccion}}</td>  
+                      <td>{{visu.correo}}</td>  
+                      <td>{{visu.pais}}</td>  
+                      <td>{{visu.contraseña}}</td>      
+                      <td><a href="{% url 'ModificarColab' visu.rutColaborador %}">Modificar</a></td> 
+                      <td><a href="{% url 'EliminarColab' visu.rutColaborador %}">Eliminar</a></td>        
+                  </tr>        
+              {%endfor%} 
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br>
+
+
+    
+    <!-- Footer -->
+<div>
+    <footer class="text-muted py-5">
+      <div class="container">
+        <p class="float-end mb-1">
+          <a href="#">Subir al inicio</a>
+        </p>
+        <div class="shared-panel">
+          <span>Encuentranos en nuestras redes sociales</span><br>
+          <a target="_blank" class="shared fb" title="Facebook"></a>	
+          <a target="_blank" class="shared tt" title="Twitter"></a>
+          <a target="_blank" class="shared gp" title="Google+"></a>
+          <a  data-action='share/whatsapp/share' class="shared wa" title="WhatsApp"></a>
+          <a target="_blank" class="shared ce" id="sml" title="Email"></a>		
+        </div>
+        <p class="mb-1">Javier Reyes &copy; Derechos reservados.</p>
+        <p class="mb-0">¿Eres nuevo en Caos News? <a href="#">visita nuestro homepage</a> o lee  <a href="#">nuestra politica</a>.</p>
+      </div>
+    </footer> 
+</div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
